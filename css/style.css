@@ -1,0 +1,298 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0px 30px;
+	line-height: 0;
+	background-color: #ffffff;
+}
+
+header nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	list-style-type: none;
+}
+
+header nav ul li a {
+	padding: 12px;
+	text-decoration: none;
+	color: #000000;
+	font-size: 20px;
+}
+
+header nav ul li a:hover {
+	color: #AAAAAA;
+}
+
+.heroerea {
+	height: 600px;
+	background-image: url("../images/横图.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.heroerea.sub-page {
+	height: 600px;
+	background-image: url("../images/横图.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.prerea {
+	display: flex;
+	text-align: center;
+	padding: 120px 0px;
+	flex-direction: column;
+	align-items: center;
+	gap: 60px;
+	background-color: #EFEFEF;
+}
+
+.prerea h2 {
+	color: #000000;
+	max-width: 600px;
+	font-size: 36px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 16px 32px;
+	color: #1F4E81;
+	font-size: 20px;
+	text-decoration: none;
+	border-width: 1px;
+	border-color: #1F4E81;
+	border-style: solid;
+	background-color: #FFFFFF;
+}
+
+.btn:hover {
+	color: #FFFFFF;
+	background-color: #ffd8d8;
+}
+
+.gallery {
+	display: flex;
+	text-align: center;
+	padding: 120px 0px;
+	flex-direction: column;
+	align-items: center;
+	background-color: #f5f5f5;
+}
+
+.gallery h2 {
+	color: #000000;
+	margin-bottom: 60px;
+	font-size: 32px;
+}
+.gallery-row img {
+	width: 300px;
+	height: 200px;
+	object-fit: cover;
+	object-position: center;
+}
+.wall {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 30px;
+	margin-bottom: 40px;
+	max-width: 960px;
+}
+.wall .gallery-row {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	transition: 0.5s;
+}
+
+.wall .gallery-row img {
+	width: 300px;
+	height: 200px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.wall .gallery-row:hover img{
+	transform: scale(1.1);
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 1);
+	z-index: 1;
+}
+
+.sns-area {
+	background-color: #ffffff;
+	text-align: center;
+	padding: 60px 0 100px 0;
+}
+
+.sns-area h2 {
+	color: #000000;
+	margin-bottom: 60px;
+	font-size: 36px;
+}
+
+.sns-area ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+}
+
+.sns-area ul li a {
+	color: #000000;
+	text-decoration: none;
+	font-size: 32px;
+	display: block;
+}
+
+.sns-area ul li a span {
+	display: block;
+}
+
+.sns-area ul li a span:first-child {
+	font-weight: bold;
+}
+
+.sns-area ul li a:hover {
+	color: #6d6c6c;
+}
+
+footer {
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	padding: 40px 0;
+	font-size: 20px;
+}
+
+@media (max-width: 768px) {
+	header {
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		padding: 20px 30px 40px;
+	}
+
+	header nav ul {
+		flex-direction: column;
+		line-height: normal;
+	}
+
+	.heroerea,
+	.gallery,
+	.prerea,
+	.sns-area {
+		padding: 90px 30px;
+	}
+
+	.gallery-row {
+		flex-direction: column;
+	}
+
+	.gallery-row img {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.sns-area ul {
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.sns-area ul li a {
+		font-size: 24px;
+	}
+
+	footer {
+		padding: 18px 0;
+	}
+}
+
+/* 2列レイアウトのスタイル */
+.col-2 {
+	background-color: #f8d9f0;
+	padding: 120px 0px;
+}
+
+.col-2 .columns {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+	max-width: 960px;
+	margin: auto;
+}
+
+.col-2 .columns div {
+	width: 50%;
+}
+
+.col-2 .columns div img {
+	width: 100%;
+	height: auto;
+}
+
+/* 2列レイアウトのメディアクエリ */
+@media screen and (max-width: 600px) {
+	.col-2 {
+		padding: 60px 30px;
+	}
+
+	.col-2 .columns div {
+		width: 100%;
+	}
+
+	.col-2 .columns {
+		flex-direction: column;
+	}
+}
+
+/* 3列レイアウトのスタイル */
+.col-3 {
+	background-color: #EFEFEF;
+	padding: 120px 0px;
+}
+
+.col-3 .columns {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+	max-width: 960px;
+	margin: auto;
+}
+
+.col-3 .columns div {
+	width: 50%;
+}
+
+.col-3 .columns div img {
+	width: 100%;
+	height: auto;
+}
+
+/* メディアクエリ */
+@media screen and (max-width: 600px) {
+	.col-3 {
+		padding: 60px 30px;
+	}
+
+	.col-3 .columns div {
+		width: 100%;
+	}
+
+	.col-3 .columns {
+		flex-direction: column;
+	}
+}
